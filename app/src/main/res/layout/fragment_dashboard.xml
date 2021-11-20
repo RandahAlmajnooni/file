@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="@color/lightgray"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/arrow2"
+        app:layout_constraintBottom_toTopOf="@+id/eventImageEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/eventImageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="-450dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_marginTop="-6dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Event name:"
+        android:textSize="19dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eventName"
+        app:layout_constraintTop_toBottomOf="@+id/eventImageEdit"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <EditText
+        android:id="@+id/eventName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="-28dp"
+        android:layout_marginRight="10dp"
+        android:hint="Enter your event name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventImageEdit"
+        app:layout_constraintVertical_bias="0.137" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Event Date:"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/eventDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventName"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <EditText
+        android:id="@+id/eventDate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="MM/DD/YY"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventName"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Event Location:"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventDate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/eventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="-280dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Enter your event location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="10dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Description:"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventLocation"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:hint="what is your event about "
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-110dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventLocation" />
+
+    <Button
+        android:id="@+id/Save"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="-200dp"
+        android:fontFamily="@font/adamina"
+        android:text="Save"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:outlineProvider="bounds"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <Button
+        android:id="@+id/Cancle"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="130dp"
+        android:fontFamily="@font/acme"
+        android:text="Cancle"
+        android:textSize="15dp"
+        android:outlineProvider="bounds"
+        android:textStyle="bold"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
